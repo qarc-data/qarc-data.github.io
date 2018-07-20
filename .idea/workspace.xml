@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b69caed-4622-4672-bfc8-2d07a971f272" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/landing-page.css" afterPath="$PROJECT_DIR$/css/landing-page.css" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -248,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531987848821</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="qarc-&gt;quarc">
+      <created>1532078365551</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1532078365551</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -284,7 +289,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding Matriks emails" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding Matriks emails" />
+    <MESSAGE value="qarc-&gt;quarc" />
+    <option name="LAST_COMMIT_MESSAGE" value="qarc-&gt;quarc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
