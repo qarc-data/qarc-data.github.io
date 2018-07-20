@@ -23,5 +23,9 @@ evaluate:
 
 # Define how to extract the scores from the evaluation bundle
 score_specs:
-- {key: '/stdout:f1', name: f1}
-- {key: '/stdout:exact_match', name: exact_match}
+#- {key: '/stdout:micro_accuracy', name: micro_accuracy}
+- {key: '/stdout:macro_accuracy', name: macro_accuracy}
+- {key: '/stdout:bleu_1', name: bleu-1}
+- {key: '/stdout:bleu_2', name: bleu-2}
+- {key: '/stdout:bleu_3', name: bleu-3}
+- {key: '/stdout:bleu_4', name: bleu-4}

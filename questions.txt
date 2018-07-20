@@ -1,0 +1,4 @@
+1. Do I need to install Codalab locally?
+2. What should be the output of evaluate.py?
+3. In config file, what should 'log_worksheet_uuid' refer to?
+3. In config file, under mimic, what are 'old' and 'new'?

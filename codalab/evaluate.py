@@ -40,7 +40,7 @@ class MoreEvaluator:
                        for bleu_order in range(1, self.max_bleu_order + 1)]
 
         for bleu_order, bleu_score in enumerate(bleu_scores):
-            results["bleu-" + str(bleu_order)] = 100 * bleu_score
+            results["bleu_" + str(bleu_order+1)] = 100 * bleu_score
         return results
 
 
