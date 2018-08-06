@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b69caed-4622-4672-bfc8-2d07a971f272" name="Default" comment="qarc-&gt;quarc">
-      <change beforePath="$PROJECT_DIR$/data_viewer.html" afterPath="$PROJECT_DIR$/data_viewer.html" />
+      <change beforePath="$PROJECT_DIR$/leaderboard.html" afterPath="$PROJECT_DIR$/leaderboard.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_viewer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_viewer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leaderboard.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="leaderboard.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leaderboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="385">
+              <caret line="139" column="42" lean-forward="false" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -128,6 +128,7 @@
       <find>aler</find>
       <find>&quot;scenario&quot;: &quot;&quot;</find>
       <find>utf</find>
+      <find>qar</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/css</dir>
@@ -159,8 +160,8 @@
         <option value="$PROJECT_DIR$/codalab/qangaroo_code.py" />
         <option value="$PROJECT_DIR$/codalab/src/qangaroo_code.py" />
         <option value="$PROJECT_DIR$/codalab/src/qarc_random.py" />
-        <option value="$PROJECT_DIR$/leaderboard.html" />
         <option value="$PROJECT_DIR$/data_viewer.html" />
+        <option value="$PROJECT_DIR$/leaderboard.html" />
       </list>
     </option>
   </component>
@@ -634,18 +635,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leaderboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="174" column="33" lean-forward="false" selection-start-line="174" selection-start-column="33" selection-end-line="174" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leaderboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="139" column="42" lean-forward="false" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="42" />
           <folding />
         </state>
       </provider>
