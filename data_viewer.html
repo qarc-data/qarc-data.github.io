@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,104 +15,305 @@
 
     <!-- Custom fonts for this template -->
     <link href="css/font.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.css" rel="stylesheet">
 
-  </head>
+</head>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="data/quarc1-dev.json"></script>
+<script>
 
-  <body>
+    var mydata;
 
-    <!-- Navigation -->
+    function loadJSON(callback) {
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', 'data/quarc1-dev.json', true);
+        xobj.onreadystatechange = function () {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                var json_data = xobj.responseText;
+                callback(json_data);
+            }
+        };
+        xobj.send(null);
+    }
 
-      <div class="container">
+    function init() {
+        loadJSON(function (response) {
+            mydata = JSON.parse(response);
+        });
+    }
+
+    function print_data() {
+        var found = 0
+        var uid = document.getElementById('utterance_id').value
+        for (var i = 0; i < mydata.length; i++) {
+            if (mydata[i].utterance_id == uid) {
+                found = 1
+                alert(JSON.stringify(mydata[i]))
+                var d = mydata[i]
+
+                var div = document.getElementById('utterance');
+                if (div) {
+                    div.parentNode.removeChild(div);
+                }
+
+                var p = document.getElementById('utteranceContainer');
+                var newElement = document.createElement('utterance_tag');
+                newElement.setAttribute('id', 'utterance');
+                var snippet = d["snippet"].replace('\n', '&#13;&#10;');
+
+                var qs_html = '';
+                if (d["history"].length > 0) {
+                    for (var j = 0; j < d["history"].length; j++) {
+                        qs_html +=
+                            '                          <p></p> <p></p><div class="question-set-container">\n' +
+                            '                              <div class="chat-container chat-container-human">\n' +
+                            '                                  <div class="chat-icon-container">\n' +
+                            '                                      <div class="chat-icon chat-icon-cape"></div>\n' +
+                            '                                  </div>\n' +
+                            '                                  <div class="bubble">\n' +
+                            '                                      <div class="more-question">' + d["history"][j]["follow_up_question"] + '</div>\n' +
+                            '                                  </div>\n' +
+                            '                              </div>\n' +
+                            '                              <p></p><div class="chat-container chat-container-system">\n' +
+                            '                                  <div class="chat-icon-container">\n' +
+                            '                                      <div class="chat-icon chat-icon-human"></div>\n' +
+                            '                                  </div>\n' +
+                            '                                  <div class="bubble">\n' +
+                            d["history"][j]["follow_up_answer"] +
+                            '                                  </div>\n' +
+                            '                              </div>\n' +
+                            '                          </div>\n'
+                    }
+                }
+
+                var html = '<div id="utterance">\n' +
+                    '<div class="row">\n' +
+                    '              <div id="interface-container" class="col-md-12">' +
+                    '              <div class="row top-buffer">\n' +
+                    '                      <div class="col-md-7">\n' +
+                    '                          <div id="snippet-text" class="text-holder form-control" contenteditable="True">\n' +
+                    '                               ' + snippet + '</div>\n' +
+                    '                      </div>\n' +
+                    '                      <div class="col-md-5">\n' +
+                    '                          <div id="scenario-text" class="text-holder form-control" contenteditable="True">\n' +
+                    d["scenario"] + '</div>\n' +
+                    '                      </div>\n' +
+                    '                  </div>\n' +
+                    '                  <div class="row">\n' +
+                    '                      <div class="col-lg-12">\n' +
+                    '                                  <input id="question-text" name="question" class="form-control question-text" value="' + d["question"] + '">\n' +
+                    '                      </div>\n' +
+                    '                  </div>\n' +
+                    '              </div>\n' + qs_html +
+                    '              </div>\n' +
+                    '              </div>';
+
+                var ans_html = '<p><h2>'+d["answer"]+'</h2></p>'
+                newElement.innerHTML = html + ans_html
+                p.appendChild(newElement);
+                // alert('3');
+
+
+                return
+            }
+        }
+        if (found == 0) {
+            alert('utterance_id not found!')
+        }
+    }
+
+    init();
+
+
+</script>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+    <div class="container">
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mc-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">QuARC Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="data_viewer.html">Data Viewer</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="leaderboard.html">Leaderboard</a>
-            </li>
-             <li class="nav-item" align="right">
-            <li class="nav-item">
-              <a class="nav-link" href="http://mr.cs.ucl.ac.uk">UCL Machine Reading Group <img src="img/uclmr_logo_round.png" style="width: 4%; height: 4%" alt="" /></a>
-            </li>
-          </ul>
+            <ul class="navbar-nav mc-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">QuARC Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data_viewer.html">Data Viewer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="leaderboard.html">Leaderboard</a>
+                </li>
+                <li class="nav-item" align="right">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://mr.cs.ucl.ac.uk">UCL Machine Reading Group <img
+                            src="img/uclmr_logo_round.png" style="width: 4%; height: 4%" alt=""/></a>
+                </li>
+            </ul>
         </div>
-      </div>
+    </div>
 
-    </nav>
+</nav>
 
-    <!-- Header -->
-    <header class="intro-header">
+<!-- Header -->
+<header class="intro-header">
 
-      <div class="container">
+    <div class="container">
         <div class="intro-message">
-          <h1>QARC</h1>
-          <!--<h4>[ˌkæŋɡɚˈruː]</h4>-->
-          <h3>Question Answering with Rules and Conversation</h3>
-          <hr class="intro-divider">
-          <ul class="list-inline intro-social-buttons">
-            <li class="list-inline-item">
-              <!-- <a href="#" class="btn btn-outline-primary btn-lg"> -->
-              <!-- <a href="#" class="btn btn-secondary btn-lg"> -->
-              <a href="https://arxiv.com" class="btn btn-info btn-lg">
-                <i class="fa fa-file-text-o fa-fw"></i>
-                <span class="paper-name">arXiv Paper</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="data/qarc.zip" class="btn btn-info btn-lg">
-                <i class="fa fa-download fa-fw"></i>
-                <span class="dataset-name">Dataset Download</span>
-              </a>
-            </li>
-          </ul>
-         <h6>Dataset Distribution under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 </a></h6>
+            <h1>QARC</h1>
+            <!--<h4>[ˌkæŋɡɚˈruː]</h4>-->
+            <h3>Question Answering with Rules and Conversation</h3>
+            <hr class="intro-divider">
+            <ul class="list-inline intro-social-buttons">
+                <li class="list-inline-item">
+                    <!-- <a href="#" class="btn btn-outline-primary btn-lg"> -->
+                    <!-- <a href="#" class="btn btn-secondary btn-lg"> -->
+                    <a href="https://arxiv.com" class="btn btn-info btn-lg">
+                        <i class="fa fa-file-text-o fa-fw"></i>
+                        <span class="paper-name">arXiv Paper</span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="data/qarc.zip" class="btn btn-info btn-lg">
+                        <i class="fa fa-download fa-fw"></i>
+                        <span class="dataset-name">Dataset Download</span>
+                    </a>
+                </li>
+            </ul>
+            <h6>Dataset Distribution under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 </a>
+            </h6>
 
         </div>
-      </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Page Content -->
-    <section class="content-section-a">
+<!-- Page Content -->
+<section class="content-section-a">
 
-      <div class="container">
+    <div class="container">
         <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Data Viewer</h2>
-            <p class="lead">
-              -- COMING SOON --
-                <!--Most work in machine reading focuses on question answering problems where the answer is directly expressed in the text to read. However, many real-world question answering problems require the reading of text not because it contains the literal answer, but because it contains a recipe to derive an answer together with the reader's background knowledge.-->
-                <!--We formalise this task and develop a crowd-sourcing strategy to collect 37k task instances based.-->
-            </p>
+            <div class="col-lg-10 ml-auto">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">Data Viewer</h2>
+                <p class="lead">
+                    <input type="text" name="utterance_id" id="utterance_id" width="400">
+                    <button onclick="print_data()">Find</button>
 
+                    <!--Most work in machine reading focuses on question answering problems where the answer is directly expressed in the text to read. However, many real-world question answering problems require the reading of text not because it contains the literal answer, but because it contains a recipe to derive an answer together with the reader's background knowledge.-->
+                    <!--We formalise this task and develop a crowd-sourcing strategy to collect 37k task instances based.-->
+                </p>
 
-          </div>
-          <div class="col-lg-5 mr-auto">
-            <!--<img class="img-fluid" src="img/task.png" alt="">-->
-          </div>
+                <div id="utteranceContainer"></div>
+                <!--<div class="row">-->
+                <!--<div id="interface-container" class="col-md-12">-->
+
+                <!--<div class="row top-buffer">-->
+                <!--<div class="col-md-8">-->
+                <!--<div id="snippet-text" class="text-holder form-control" contenteditable="True"-->
+                <!--placeholder="Rule snippet.."></div>-->
+                <!--</div>-->
+
+                <!--<div class="col-md-4">-->
+                <!--<div id="scenario-text" class="text-holder form-control" contenteditable="True"-->
+                <!--placeholder="Scenario.."></div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="row">-->
+                <!--<div class="col-lg-12">-->
+                <!--<form id="ask-anything">-->
+                <!--<div class="input-group">-->
+                <!--<input id="question-text" name="question" class="form-control question-text"-->
+                <!--placeholder="Ask anything.."-->
+                <!--value=""-->
+                <!--autofocus autocomplete="off" required="required"/>-->
+                <!--<span class="input-group-btn">-->
+                <!--<button id="ask-anything-submit" class="btn btn-primary" type="submit">Ask</button>-->
+                <!--</span>-->
+                <!--</div>-->
+                <!--</form>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="top-buffer" id="ans-row">-->
+                <!--<div class="row">-->
+                <!--<div class="col">-->
+                <!--<div id="ans-container">-->
+                <!--&lt;!&ndash; 1 &ndash;&gt;-->
+                <!--<div class="question-set-container">-->
+                <!--<div class="chat-container chat-container-human">-->
+                <!--<div class="chat-icon-container">-->
+                <!--<div class="chat-icon chat-icon-cape"></div>-->
+                <!--</div>-->
+                <!--<div class="bubble">-->
+                <!--<div class="more-question"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="chat-container chat-container-system">-->
+                <!--<div class="chat-icon-container">-->
+                <!--<div class="chat-icon chat-icon-human"></div>-->
+                <!--</div>-->
+                <!--<div class="bubble">-->
+                <!--<fieldset class="radio-fieldset">-->
+                <!--<label class="radio-inline radio-yes">-->
+                <!--<input type="radio" name="" value="Yes"> Yes-->
+                <!--</label>-->
+                <!--&nbsp;&nbsp;-->
+                <!--<label class="radio-inline radio-no">-->
+                <!--<input type="radio" name="" value="No"> No-->
+                <!--</label>-->
+                <!--</fieldset>-->
+                <!--<div class="response-reason"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /1 &ndash;&gt;-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--</div>-->
+                <!--<div id="viz-container" class="col-md-4">-->
+                <!--<div class="closebtn">&times;</div>-->
+                <!--<div id="tree-viz-container">-->
+                <!--<div id="loading-container">-->
+                <!--<div id="tree-viz-loading" class="loading">-->
+                <!--<i class="fa fa-spinner fa-pulse fa-2x"></i><br/>-->
+                <!--Loading..-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div id="tree-viz"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+
+            </div>
+            <div class="col-lg-5 mr-auto">
+                <!--<img class="img-fluid" src="img/task.png" alt="">-->
+            </div>
         </div>
 
-      </div>
-      <!-- /.container -->
-    </section>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- /.container -->
+</section>
 
-  </body>
+</body>
 
 <!-- CODALAB ribbon -->
 <!-- <div class="corner-ribbon top-right sticky red">New: CodaLab</div> -->
 
 
 </html>
+
+
