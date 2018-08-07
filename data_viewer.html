@@ -194,7 +194,8 @@
 </head>
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="data/quarc1-dev.json"></script>
+<script type="text/javascript" src="data/quarc1-train.json"></script>
+<script src=mmd.min.js></script>
 <script>
 
     var mydata;
@@ -203,7 +204,7 @@
 
         var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
-        xobj.open('GET', 'data/quarc1-dev.json', true);
+        xobj.open('GET', 'data/quarc1-train.json', true);
         xobj.onreadystatechange = function () {
             if (xobj.readyState == 4 && xobj.status == "200") {
                 var json_data = xobj.responseText;
@@ -265,17 +266,22 @@
                             '                    <div class="bubble"> ' + d["history"][j]["follow_up_answer"] + '</div>\n' +
                             '                </div>\n'
                     }
+                    history_html += '<hr/>'
                 }
-                history_html += '<hr/></div>'
+                history_html += '</div>'
+                var scenario = d["scenario"]
+                if (scenario == '') {
+                    scenario = '[Empty Scenario]'
+                }
 
                 var question_html =
                     '           <div class="question-container" title="Snippet">\n' +
                     '                <!--<h4><i>Snippet</i></h4>-->\n' +
-                    '                <div class="question-txt" id="questiontxt">' + d["snippet"] + '</div>\n' +
+                    '                <div class="question-txt" id="questiontxt">' + mmd(d["snippet"]) + '</div>\n' +
                     '            </div>\n' +
                     '            <div class="question-container" title="Scenario">\n' +
                     '                <!--<h4><i>Scenario</i></h4>-->\n' +
-                    '                <div class="scenario-txt" id="scenario">' + d["scenario"] +
+                    '                <div class="scenario-txt" id="scenario">' + scenario +
                     '                </div>\n' +
                     '            </div>\n' +
                     '            <div title="Question">\n' +
@@ -384,6 +390,12 @@
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
                 <h2 class="section-heading">Data Viewer</h2>
+                <p class="lead">
+                    Data viewer helps to understand the data better by showing an instance in the form of a
+                    conversation.
+                    To view a specific instance, enter an <i>'utterance_id'</i> and press <b>View</b> or press <b>Random</b> to display a random
+                    instance.
+                </p>
                 <p class="lead">
                     <input type="text" placeholder="Enter utterance id ..." name="utterance_id" id="utterance_id"
                            size="50">

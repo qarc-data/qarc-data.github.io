@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b69caed-4622-4672-bfc8-2d07a971f272" name="Default" comment="qarc-&gt;quarc">
+      <change beforePath="$PROJECT_DIR$/TODO.txt" afterPath="$PROJECT_DIR$/TODO.txt" />
       <change beforePath="$PROJECT_DIR$/data_viewer.html" afterPath="$PROJECT_DIR$/data_viewer.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,17 +32,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_viewer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_viewer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="345" column="0" lean-forward="true" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
+            <state relative-caret-position="291">
+              <caret line="212" column="1" lean-forward="false" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
               <folding>
-                <marker date="1533658959805" expanded="true" signature="7354:7369" ph="..." />
-                <marker date="1533658959805" expanded="true" signature="7805:7820" ph="..." />
-                <marker date="1533658959805" expanded="true" signature="9137:9152" ph="..." />
-                <marker date="1533658959805" expanded="true" signature="9939:9954" ph="..." />
+                <marker date="1533662209050" expanded="true" signature="7734:7749" ph="..." />
+                <marker date="1533662209050" expanded="true" signature="8185:8200" ph="..." />
+                <marker date="1533662209050" expanded="true" signature="9517:9532" ph="..." />
+                <marker date="1533662209050" expanded="true" signature="10319:10334" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mmd.min.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mmd.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,8 +60,8 @@
       <file leaf-file-name="quarc1-dev.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/quarc1-dev.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="65" />
+            <state relative-caret-position="60">
+              <caret line="4" column="68" lean-forward="true" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -59,8 +70,8 @@
       <file leaf-file-name="TODO.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TODO.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="90">
+              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -233,6 +244,11 @@
               <item name="qarc-data.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="qarc-data.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qarc-data.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="mmd.js" type="620a8d5e:NestingTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -255,19 +271,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/codalab" />
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$/codalab/qarc-1" />
-      <recent name="$PROJECT_DIR$/codalab/qarc/qarc_competition_bundle" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/codalab" />
       <recent name="$PROJECT_DIR$/codalab/src" />
       <recent name="$PROJECT_DIR$/codalab/qarc-1/submission/submission2" />
       <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/codalab" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/codalab/qarc-1" />
+      <recent name="$PROJECT_DIR$/codalab/qarc/qarc_competition_bundle" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -409,7 +425,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="23" width="1280" height="777" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -417,7 +432,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24313408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24313408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -451,7 +466,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/data_viewer.html</url>
-          <line>240</line>
+          <line>252</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -470,13 +485,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/font.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -567,22 +575,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.json" />
-    <entry file="file://$PROJECT_DIR$/TODO.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/quarc1-dev.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="65" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -602,16 +594,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TODO.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/quarc1-dev.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="68" lean-forward="true" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="345" column="0" lean-forward="true" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
+        <state relative-caret-position="291">
+          <caret line="212" column="1" lean-forward="false" selection-start-line="212" selection-start-column="1" selection-end-line="212" selection-end-column="1" />
           <folding>
-            <marker date="1533658959805" expanded="true" signature="7354:7369" ph="..." />
-            <marker date="1533658959805" expanded="true" signature="7805:7820" ph="..." />
-            <marker date="1533658959805" expanded="true" signature="9137:9152" ph="..." />
-            <marker date="1533658959805" expanded="true" signature="9939:9954" ph="..." />
+            <marker date="1533662209050" expanded="true" signature="7734:7749" ph="..." />
+            <marker date="1533662209050" expanded="true" signature="8185:8200" ph="..." />
+            <marker date="1533662209050" expanded="true" signature="9517:9532" ph="..." />
+            <marker date="1533662209050" expanded="true" signature="10319:10334" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmd.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
