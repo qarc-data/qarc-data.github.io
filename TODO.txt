@@ -1,4 +1,11 @@
-1. Do I need to install Codalab locally?
-2. What should be the output of evaluate.py?
-3. In config file, what should 'log_worksheet_uuid' refer to?
-3. In config file, under mimic, what are 'old' and 'new'?
+- create quarc repo
+- remove this repo
+- copy codalab folder into the research repo
+- copy research repo into UCL (without history)
+- Ask Patrick to follow the codalab instructions
+- Write the baseline results from the paper
+- work on data viewer formatting
+- find out the proper way of mimicing in the codalab
+- create Sentihood website
+- share login information with others in the group
+- docker for tensorflow and pytorch
