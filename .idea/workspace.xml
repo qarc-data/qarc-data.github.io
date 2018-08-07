@@ -34,13 +34,13 @@
       <file leaf-file-name="data_viewer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data_viewer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="386" column="58" lean-forward="false" selection-start-line="386" selection-start-column="58" selection-end-line="386" selection-end-column="58" />
+            <state relative-caret-position="57">
+              <caret line="345" column="0" lean-forward="true" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
               <folding>
-                <marker date="1533658613817" expanded="true" signature="7354:7369" ph="..." />
-                <marker date="1533658613817" expanded="true" signature="7805:7820" ph="..." />
-                <marker date="1533658613817" expanded="true" signature="9137:9152" ph="..." />
-                <marker date="1533658613817" expanded="true" signature="9939:9954" ph="..." />
+                <marker date="1533658959805" expanded="true" signature="7354:7369" ph="..." />
+                <marker date="1533658959805" expanded="true" signature="7805:7820" ph="..." />
+                <marker date="1533658959805" expanded="true" signature="9137:9152" ph="..." />
+                <marker date="1533658959805" expanded="true" signature="9939:9954" ph="..." />
               </folding>
             </state>
           </provider>
@@ -71,6 +71,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2085">
               <caret line="139" column="42" lean-forward="false" selection-start-line="139" selection-start-column="42" selection-end-line="139" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="61" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -534,17 +544,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/codalab/competition-config.yml" />
-    <entry file="file://$PROJECT_DIR$/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codalab/wikihop_dev.json" />
     <entry file="file://$PROJECT_DIR$/codalab/qangaroo_predictions.json" />
     <entry file="file://$PROJECT_DIR$/codalab/quarc1_dev_answer.json" />
@@ -567,14 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="40" lean-forward="false" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.json" />
     <entry file="file://$PROJECT_DIR$/TODO.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -592,15 +583,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="61" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data_viewer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="386" column="58" lean-forward="false" selection-start-line="386" selection-start-column="58" selection-end-line="386" selection-end-column="58" />
+        <state relative-caret-position="57">
+          <caret line="345" column="0" lean-forward="true" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
           <folding>
-            <marker date="1533658613817" expanded="true" signature="7354:7369" ph="..." />
-            <marker date="1533658613817" expanded="true" signature="7805:7820" ph="..." />
-            <marker date="1533658613817" expanded="true" signature="9137:9152" ph="..." />
-            <marker date="1533658613817" expanded="true" signature="9939:9954" ph="..." />
+            <marker date="1533658959805" expanded="true" signature="7354:7369" ph="..." />
+            <marker date="1533658959805" expanded="true" signature="7805:7820" ph="..." />
+            <marker date="1533658959805" expanded="true" signature="9137:9152" ph="..." />
+            <marker date="1533658959805" expanded="true" signature="9939:9954" ph="..." />
           </folding>
         </state>
       </provider>
