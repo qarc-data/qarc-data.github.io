@@ -9,3 +9,9 @@
 - create Sentihood website
 - share login information with others in the group
 - docker for tensorflow and pytorch
+
+
+DATA
+-------
+
+tree_id: dd4cb41e8c180a800a000c796ac71f7fc58eb66d

@@ -55,6 +55,24 @@
             max-height: 480px;
             margin-bottom: 16px;
         }
+        .code-txt {
+            display: block;
+            padding: 8px 24px;
+            word-wrap: break-word;
+            border-radius: 4px;
+            word-break: normal;
+            font-weight: 400;
+            background-color: #f0f0f0;
+            line-height: 1.5em;
+            font-size: 1em;
+            border: 1px solid #062c33;
+            color: #555;
+            text-align: left;
+            /*overflow-y: scroll;*/
+            min-height: 40px;
+            max-height: 600px;
+            margin-bottom: 10px;
+        }
 
         .scenario-txt {
             display: block;
@@ -235,7 +253,36 @@
         print_data(uid)
     }
 
+    function print_tree(uid) {
+        var tree_id = -1
+        var tree_dss = []
+        var ids = []
+        for (var i = 0; i < mydata.length; i++) {
+            if (mydata[i].utterance_id == uid) {
+                var d = mydata[i]
+                tree_id = d["tree_id"]
+                // alert(tree_id)
+                break
+            }
+        }
+        if (tree_id == -1) {
+            return
+        }
+        else {
+            for (var i = 0; i < mydata.length; i++) {
+                if (mydata[i].tree_id == tree_id && mydata[i].evidence.length == 0 && mydata[i].answer != 'Irrelevant') {
+                    // alert('pushed: ' + mydata[i].utterance_id)
+                    tree_dss.push(mydata[i])
+                    ids.push(mydata[i].utterance_id)
+                }
+            }
+            alert(tree_dss.length)
+            alert(id.toString())
+        }
+    }
+
     function print_data(uid) {
+        // print_tree(uid)
 
         var found = 0
         for (var i = 0; i < mydata.length; i++) {
@@ -316,6 +363,7 @@
         }
     }
 
+
     init();
 
 
@@ -351,7 +399,7 @@
 </nav>
 
 <!-- Header -->
-<header class="intro-header">
+<header class="data-header">
 
     <div class="container">
         <div class="intro-message">
@@ -389,23 +437,199 @@
             <div class="col-lg-10 ml-auto">
                 <hr class="section-heading-spacer">
                 <div class="clearfix"></div>
-                <h2 class="section-heading">Data Viewer</h2>
+                <h2 class="section-heading">Dataset</h2>
+                <p class="lead">
+                    QuARC is a Conversational Question Answering dataset focussing on question answering
+                    from texts containing rules. For understanding the dataset and the task better, we provide <a href="#data_explain">explanation</a> and <a href="#data_vis">visualisation</a> of the data.
+                </p>
+
+
+            </div>
+            <div class="col-lg-5 mr-auto">
+
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+</section>
+
+<section class="content-section-b">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 ml-auto">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading"><a name="data_explain">Understanding the Data</a></h2>
+
+                <p class="lead">
+                    In this section, we explain what each attribute of an instance present.
+                </p>
+
+                <hr/>
+                <u><h4 class="section-heading">Attributes: </h4></u>
+                <table border="0" class="lead" valign="top">
+                    <tr>
+                        <th valign="top">utterance_id:</th>
+                        <td>&nbsp;</td>
+                        <td>Unique identification code for an instance in the dataset.</td>
+                    </tr>
+                    <tr>
+                        <th valign="top">tree_id:</th>
+                        <td>&nbsp;</td>
+                        <td>A tree_id specifies a unique combination of a snippet and a question. There could be
+                            several
+                            instances with the same tree_id. This is because ..
+                        </td>
+                    </tr>
+                    <tr>
+                        <th valign="top">source_url:</th>
+                        <td>&nbsp;</td>
+                        <td>The URL of the document containing the rule snippet.</td>
+                    </tr>
+                    <tr>
+                        <th valign="top">snippet:</th>
+                        <td>&nbsp;</td>
+                        <td>Input support document, i.e. often a paragraph which contains some rules.</td>
+                    </tr>
+                    <tr>
+                        <th valign="top">question:</th>
+                        <td>&nbsp;</td>
+                        <td>A question that can or cannot be answered from the snippet.</td>
+                    </tr>
+                    <tr>
+                        <th valign="top">scenario:</th>
+                        <td>&nbsp;</td>
+                        <td>Describes the context of the question.</td>
+                    </tr>
+                    <tr>
+                        <th valign="top">history:</th>
+                        <td>&nbsp;</td>
+                        <td>The conversation history, i.e. a set of follow-up questions and their corresponding
+                            answers.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th valign="top">evidence:</th>
+                        <td>&nbsp;</td>
+                        <td>A list of <i>relevant</i> information that system have extracted from the user's
+                            scenario.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th valign="top">answer:</th>
+                        <td>&nbsp;</td>
+                        <td>The desired output of a prediction model.</td>
+                    </tr>
+                </table>
+                <p></p>
+                <hr/>
+                <u><h4 class="section-heading">Example #1</h4></u>
+                <div class="code-txt">
+                <pre>
+{
+    "utterance_id": "043f57993ac049afe1624fc14ac70e612678dcd2"
+    "tree_id": "9ae3d25b11bc3a4be81f5884371de3b7c145ad48"
+    "source_url": "https://www.gov.uk/winter-fuel-payment/eligibility"
+    "snippet": "You can't get the payment if you live in Cyprus, France or Gibraltar"
+    "question": "Can I get Winter Fuel Payment?"
+    "scenario": ""
+    "history": []
+    "evidence": []
+    "answer": "Do you live in Cyprus?"
+}</pre>
+                </div>
+                <p></p>
+                <!-- Example 2-->
+                <u><h4 class="section-heading">Example #2</h4></u>
+                <div class="code-txt">
+                <pre>
+{
+    "utterance_id": "057c192daa702b1df682f95648504aef101d034e"
+    "tree_id": "9ae3d25b11bc3a4be81f5884371de3b7c145ad48"
+    "source_url": "https://www.gov.uk/winter-fuel-payment/eligibility"
+    "snippet": "You can't get the payment if you live in Cyprus, France or Gibraltar"
+    "question": "Can I get Winter Fuel Payment?"
+    "scenario": ""
+    "history": [
+        {
+            "follow_up_question": "Do you live in Cyprus?"
+            "follow_up_answer": "Yes"
+        }
+    ]
+    "evidence": []
+    "answer": "No"
+}</pre>
+                </div>
+                <p></p>
+                <!-- Example 3-->
+                <u><h4 class="section-heading">Example #3</h4></u>
+                <div class="code-txt">
+                <pre>
+{
+    "utterance_id": "057c192daa702b1df682f95648504aef101d034e"
+    "tree_id": "9ae3d25b11bc3a4be81f5884371de3b7c145ad48"
+    "source_url": "https://www.gov.uk/winter-fuel-payment/eligibility"
+    "snippet": "You can't get the payment if you live in Cyprus, France or Gibraltar"
+    "question": "Can I get Winter Fuel Payment?"
+    "scenario": "I am a 28 year old man from Malta. I currently live in Malta."
+    "history": []
+    "evidence": [
+        {
+            "follow_up_question": "Do you live in Cyprus?"
+            "follow_up_answer": "No"
+        },
+        {
+            "follow_up_question": "Do you live in France?"
+            "follow_up_answer": "No"
+        }
+        {
+            "follow_up_question": "Do you live in Gibraltar?"
+            "follow_up_answer": "No"
+        }
+    ]
+    "answer": "Yes"
+}</pre>
+                </div>
+            </div>
+            <div class="col-lg-5 mr-auto">
+                <!--<img class="img-fluid" src="img/task.png" alt="">-->
+            </div>
+
+
+        </div>
+    </div>
+    <!-- /.container -->
+</section>
+
+<section class="content-section-a">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 ml-auto">
+                <hr class="section-heading-spacer">
+                <div class="clearfix"></div>
+                <h2 class="section-heading"><a name="data_vis">Data Visualisation</a></h2>
                 <p class="lead">
                     Data viewer helps to understand the data better by showing an instance in the form of a
                     conversation.
-                    To view a specific instance, enter an <i>'utterance_id'</i> and press <b>View</b> or press <b>Random</b> to display a random
+                    To view a specific instance, enter an <i>'utterance_id'</i> from the <i><b>training data</b></i> and press <b>View Instance</b> or press
+                    <b>View Random</b> to display a random
                     instance.
                 </p>
                 <p class="lead">
                     <input type="text" placeholder="Enter utterance id ..." name="utterance_id" id="utterance_id"
                            size="50">
-                    <button onclick="show()">View</button>
-                    <button onclick="show_random()">Random</button>
+                    <button onclick="show()">View Instance</button>
+                    <button onclick="show_random()">View Random</button>
                 </p>
                 <div class="col-xs-11 col-md-10 row-margin" id="utteranceContainer">
                 </div>
 
             </div>
+            <div class="col-lg-5 mr-auto"></div>
+
         </div>
     </div>
     <hr/>

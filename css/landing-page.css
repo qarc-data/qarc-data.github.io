@@ -108,11 +108,26 @@ body, h1, h2, h3, h4, h5, h6 {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: left;
+  height: 600px;
   /*color: #f8f8f8;*/
   color: #ffffff;
   max-width: 100%;
-  max-height: 60%;
-  background: url(../img/jumping_kangaroos.jpg) no-repeat center center;
+  /*max-height: 60%;*/
+  background: url(../img/quarc2.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+
+.data-header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: left;
+  height: 600px;
+  /*color: #f8f8f8;*/
+  color: #ffffff;
+  max-width: 100%;
+  /*max-height: 60%;*/
+  background: url(../img/quarc5.jpg) no-repeat center center;
   background-size: cover;
 }
 
