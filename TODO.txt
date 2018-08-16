@@ -1,17 +1,7 @@
-- create quarc repo
+- write example in the data where the evidence is in the history
+- camera ready
+- create test set without evidence
 - remove this repo
-- copy codalab folder into the research repo
-- copy research repo into UCL (without history)
-- Ask Patrick to follow the codalab instructions
-- Write the baseline results from the paper
-- work on data viewer formatting
 - find out the proper way of mimicing in the codalab
 - create Sentihood website
 - share login information with others in the group
-- docker for tensorflow and pytorch
-
-
-DATA
--------
-
-tree_id: dd4cb41e8c180a800a000c796ac71f7fc58eb66d
