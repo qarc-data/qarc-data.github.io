@@ -1,7 +1,0 @@
-- write example in the data where the evidence is in the history
-- camera ready
-- create test set without evidence
-- remove this repo
-- find out the proper way of mimicing in the codalab
-- create Sentihood website
-- share login information with others in the group
